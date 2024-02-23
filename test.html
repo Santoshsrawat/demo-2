@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 0;
+    }
+
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .navbar h1 {
+        margin: 0;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin-right: 20px;
+    }
+
+    .navbar ul li:last-child {
+        margin-right: 0;
+    }
+
+    .navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .sidebar {
+        background-color: #f4f4f4;
+        width: 200px;
+        padding: 20px;
+        float: left;
+        height: 100vh;
+    }
+
+    .sidebar h2 {
+        margin-top: 0;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .sidebar ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+        .navbar ul {
+            margin-left: 0;
+            margin-top: 10px;
+            justify-content: center;
+        }
+        .navbar ul li {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        .sidebar {
+            width: 100%;
+        }
+        .content {
+            margin-left: 0;
+        }
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>My Website</h1>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i> Sidebar Home</a></li>
+            <li><a href="#"><i class="fas fa-info-circle"></i> Sidebar About</a></li>
+            <li><a href="#"><i class="fas fa-cogs"></i> Sidebar Services</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> Sidebar Contact</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Main Content Area</h2>
+        <p>This is the main content area. It will occupy the remaining space.</p>
+    </div>
+</body>
+</html>
